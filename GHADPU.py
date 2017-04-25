@@ -80,3 +80,5 @@ MasterReportWriter.save()
 # Output the Excel sheet
 ProdDB.to_excel('C:\\Users\\qiufangda\\Desktop\\GHAB\\ProductionReport\\AC_DAILY.xlsx', sheet_name='AC_DAILY',
                 index=False)
+
+ProdDB.to_csv('C:\\Users\\qiufangda\\Desktop\\GHAB\\ProductionReport\\AC_DAILY.csv')
