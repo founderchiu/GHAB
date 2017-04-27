@@ -1,4 +1,7 @@
 import pandas as pd
+# import pypyodbc
+
+
 
 wellDict={'Appaloosa 7H': 'N9F182LUKU',
  'Cobra #23H': 'N8VK2P3RM4',
@@ -81,4 +84,14 @@ MasterReportWriter.save()
 ProdDB.to_excel('C:\\Users\\qiufangda\\Desktop\\GHAB\\ProductionReport\\AC_DAILY.xlsx', sheet_name='AC_DAILY',
                 index=False)
 
-ProdDB.to_csv('C:\\Users\\qiufangda\\Desktop\\GHAB\\ProductionReport\\AC_DAILY.csv')
+ProdDB.to_csv('C:\\Users\\qiufangda\\Desktop\\GHAB\\ProductionReport\\AC_DAILY.csv', sep=',')
+
+# conn = pypyodbc.win_connect_mdb("C:\\Users\\qiufangda\\Desktop\\GHAB\\GHAOFM\\test.mdb")
+#
+# cur = conn.cursor()
+#
+# cur.execute(u"""CREATE TABLE pypyodbc_test_tabl (ID INTEGER PRIMARY KEY,product_name TEXT)""")
+#
+# cur.execute(u"""INSERT INTO pypyodbc_test_tabl VALUES (1,'PyPyODBC')""")
+# conn.commit()
+# conn.close()
