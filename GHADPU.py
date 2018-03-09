@@ -1,5 +1,5 @@
 import pandas as pd
-# import pypyodbc
+import pypyodbc
 
 
 
@@ -85,13 +85,10 @@ ProdDB.to_excel('C:\\Users\\qiufangda\\Desktop\\GHAB\\ProductionReport\\AC_DAILY
                 index=False)
 
 ProdDB.to_csv('C:\\Users\\qiufangda\\Desktop\\GHAB\\ProductionReport\\AC_DAILY.csv', sep=',')
-
 # conn = pypyodbc.win_connect_mdb("C:\\Users\\qiufangda\\Desktop\\GHAB\\GHAOFM\\test.mdb")
-#
 # cur = conn.cursor()
-#
-# cur.execute(u"""CREATE TABLE pypyodbc_test_tabl (ID INTEGER PRIMARY KEY,product_name TEXT)""")
-#
-# cur.execute(u"""INSERT INTO pypyodbc_test_tabl VALUES (1,'PyPyODBC')""")
+# cur.execute(u"""CREATE TABLE AC_Daily2(NOD DOUBLE,PROPNUM TEXT PRIMARY KEY,D_Date DATE);""")
+# cur.execute(u"""INSERT INTO AC_Daily2 VALUES ({},{},{});""".format(ProdDB[0],ProdDB[1],ProdDB[2]))
 # conn.commit()
+# cur.close()
 # conn.close()
