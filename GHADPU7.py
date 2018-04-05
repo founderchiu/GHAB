@@ -160,6 +160,7 @@ def clean(val):
 for index, row in ProdDB.iterrows():
     values = [str(row[item]) for item in col_list]
     sql = u"""INSERT INTO AC_Daily ({}) VALUES ({});""".format(cols, ','.join(['?' for x in values]))
+
     #print(sql)
     values = [clean(x) for x in values]
     #print(values)
